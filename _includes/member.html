@@ -1,0 +1,37 @@
+<!-- <section class="articles">
+    <article class="article">
+      <h2 class="article-title">
+        <a href="#"> aaaa </a>
+      </h2>
+      <small class="date">{{post.date | date_to_string}}</small>
+      <div class="categories">
+        
+        <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+          >aa</a
+        >
+        
+      </div>
+    </article>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+  </section> -->
+
+<section class="articles">
+  <div class="article">
+    <h2 class="article-title">
+      <a href="#"> Irfan Alamsyah </a>
+    </h2>
+  </div>
+</section>
+
+
+  <script>
+    var members = [];
+    fetch('https://api.github.com/orgs/cybersecurityipb/members')
+  .then(response => response.json())
+  .then(data => members = data);
+  if (members.length > 0) {
+    console.log(members)
+    document.getElementById("demo").innerHTML = members[0].login;
+  }
+  </script>

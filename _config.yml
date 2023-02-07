@@ -1,4 +1,4 @@
-title: Jekyll Serial Programmer
+title: Cyber Security IPB (CSI)
 markdown: kramdown
 
 # for atom feed
@@ -11,10 +11,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-get-json
 
 domain: irfanalmsyah.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://irfanalmsyah.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: "/jekyll-test/" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-test" # the subpath of your site, e.g. /blog
 
 collections_dir: all_collections
 collections:
@@ -28,3 +29,7 @@ defaults:
       layout: "post"
       permalink: /posts/:title/
 exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+
+jekyll_get_json:
+  - url: "https://api.github.com/orgs/cybersecurityipb/members"
+    data: "members"
